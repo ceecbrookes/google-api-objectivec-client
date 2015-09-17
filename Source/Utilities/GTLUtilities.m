@@ -24,7 +24,10 @@
 // URL Encoding
 
 + (NSString *)stringByURLEncodingString:(NSString *)str {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
   NSString *result = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#pragma clang diagnostic pop
   return result;
 }
 
@@ -44,11 +47,14 @@ const CFStringRef kCharsToForceEscape = CFSTR("!*'();:@&=+$,/?%#[]");
   CFStringRef leaveUnescaped = NULL;
 
   CFStringRef escapedStr;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
   escapedStr = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                        originalString,
                                                        leaveUnescaped,
                                                        kCharsToForceEscape,
                                                        kCFStringEncodingUTF8);
+#pragma clang diagnostic pop
   if (escapedStr) {
     resultStr = [(id)CFMakeCollectable(escapedStr) autorelease];
   }
@@ -64,11 +70,14 @@ const CFStringRef kCharsToForceEscape = CFSTR("!*'();:@&=+$,/?%#[]");
   CFStringRef leaveUnescaped = CFSTR(" ");
 
   CFStringRef escapedStr;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
   escapedStr = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                        originalString,
                                                        leaveUnescaped,
                                                        kCharsToForceEscape,
                                                        kCFStringEncodingUTF8);
+#pragma clang diagnostic pop
 
   if (escapedStr) {
     NSMutableString *mutableStr = [NSMutableString stringWithString:(NSString *)escapedStr];

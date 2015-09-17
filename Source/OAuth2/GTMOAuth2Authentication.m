@@ -1203,11 +1203,14 @@ finishedRefreshWithFetcher:(GTMOAuth2Fetcher *)fetcher
 
   CFStringRef escapedStr = NULL;
   if (str) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     escapedStr = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                          originalString,
                                                          leaveUnescaped,
                                                          forceEscaped,
                                                          kCFStringEncodingUTF8);
+#pragma clang diagnostic pop
     [(id)CFMakeCollectable(escapedStr) autorelease];
   }
 
@@ -1247,7 +1250,10 @@ finishedRefreshWithFetcher:(GTMOAuth2Fetcher *)fetcher
 }
 
 + (NSString *)unencodedOAuthParameterForString:(NSString *)str {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
   NSString *plainStr = [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#pragma clang diagnostic pop
   return plainStr;
 }
 

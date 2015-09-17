@@ -290,11 +290,14 @@ const char *kKeychainAccountName = "OAuth";
       [self setupSheetTerminationHandling];
 
       NSWindow *sheet = [self window];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
       [NSApp beginSheet:sheet
          modalForWindow:parentWindow
           modalDelegate:self
          didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:)
             contextInfo:nil];
+#pragma clang diagnostic pop
     } else {
       // modeless
       [self showWindow:self];
