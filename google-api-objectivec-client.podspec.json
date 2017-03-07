@@ -23,6 +23,7 @@
       "~> 1.0.125"
     ]
   },
+  "exclude_files": ["Source/HTTPFetcher/*", "Source/OAuth2/*", "Source/JSON/*"]
   "requires_arc": false,
   "subspecs": [
     {
