@@ -34,5 +34,5 @@
    "osx": {
     "source_files": "Source/Mac/*.{h,m}",
     "resources": "Source/Mac/*.xib"
-  },
+  }
 }
