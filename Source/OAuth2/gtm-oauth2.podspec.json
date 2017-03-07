@@ -35,7 +35,7 @@
     "source_files": "Source/OAuth2/Mac/*.{h,m}",
     "resources": "Source/OAuth2/Mac/*.xib"
   },
-   "pod_target_xcconfig": {
+   "user_target_xcconfig": {
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   }
 }
