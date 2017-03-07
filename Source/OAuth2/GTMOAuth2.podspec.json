@@ -18,8 +18,7 @@
   },
   "dependencies": {
     "gtm-http-fetcher": [
-      "~> 1.0.141",
-      {"podspec": 'https://example.com/JSONKit.podspec'}
+      "~> 1.0.141"
     ]
   },
   "requires_arc": false,
