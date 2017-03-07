@@ -27,7 +27,7 @@
   ],
   "source_files": "Source/OAuth2/*.{h,m}",
   "ios": {
-    "source_files": "Source/Touch/*.{h,m}",
-    "resources": "Source/Touch/*.xib"
+    "source_files": "Source/OAuth2/Touch/*.{h,m}",
+    "resources": "Source/OAuth2/Touch/*.xib"
   }
 }
