@@ -16,14 +16,6 @@
     "ios": "10.0",
     "osx": "10.12"
   },
-  "dependencies": {
-    "gtm-http-fetcher": [
-      "~> 1.0.141"
-    ],
-    "gtm-oauth2": [
-      "~> 1.0.125"
-    ]
-  },
   "requires_arc": false,
   "subspecs": [
     {
