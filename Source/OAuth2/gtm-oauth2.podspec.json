@@ -35,7 +35,7 @@
     "source_files": "Source/Mac/*.{h,m}",
     "resources": "Source/Mac/*.xib"
   },
-   "pod-target-xcconfig: {
+   "pod-target-xcconfig": {
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   }
 }
