@@ -26,7 +26,7 @@
     "Security",
     "SystemConfiguration"
   ],
-  "source_files": "Source/*.{h,m}",
+  "source_files": "Source/OAuth2/*.{h,m}",
   "osx": {
     "source_files": "Source/Mac/*.{h,m}",
     "resources": "Source/Mac/*.xib"
